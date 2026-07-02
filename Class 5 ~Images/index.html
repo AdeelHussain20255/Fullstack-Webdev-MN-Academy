@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+<body>
+    
+<!------------------------------------------CHP # 05---------------------------------------- -->
+<!-------------------------------------------Images----------------------------------------- -->
+
+
+<!-- ------------------ Elements in HTML -------------------- -->
+<!-- [Opening Tag] + [Content] + [Closing Tag] = HTML Element -->
+    <p>This whole line is a html element.</p>
+<!-- -------------------------------------------------------- -->
+
+
+<!-- -------------------------- Image tag --------------------------- -->
+    <!-- src=""  >>>>  tells where the file is -->
+
+    <!-- alt=""  >>>>  shows this text when image fails to load -->
+    <!-- If an image is a background graphic,
+    use alt & leave it empty: alt="". 
+    This tells screen readers to intentionally skip past it. -->
+
+    <!-- title="" browser displays this text as a little pop-up,
+    when user hovers mouse over the image. -->
+
+    <!--  />  >>>>  No closing tag, it uses this as closing -->
+
+                    <img src="" alt="" title="" />
+<!-- ----------------------------------------------------------------- -->
+
+
+<!-- ----------------------Attributes vs. CSS ------------------------ -->
+
+<!-- 
+    Attributes: (width / height)
+    Provide the pixel, dimensions of the file.
+    CSS Styles: (width / max-width)
+    Provide the rules for how the image should scale and behave responsively on different screen sizes.
+-->
+<!--Example:
+    Browsers do something amazing with the HTML width and height attributes.
+    The second the browser reads width="800" & height="600" attributes,
+    it does some math (800 \ 600) to figure the image 4:3 ratio.
+    The CSS tells the image to shrink down to fit a small phone screen,
+    the browser uses that ratio to reserve a perfectly sized blank box on page before image even loads,
+    Without HTML attributes, the browser leaves a tiny default box, and when a large image suddenly loads,
+    it aggressively pushes all your text and layout downwards—creating a terrible user experience. 
+-->
+<!-- ------------------------------------------------------------------- -->
+
+
+<!-- ------------------------- FINAL EXAMPLE ------------------------------- -->
+<!-- src + alt + title + attributes (900x600) -->
+<img 
+src="biryani.png" 
+alt="Homemade Chicken Biryani" 
+title="Biryani Preview" 
+width="900" height="600" 
+/>
+<!-- CSS styling to change the text color -->
+<h1 style="color: darkorange;">Delicious Homemade Chicken Biryani</h1>
+<!-- ------------------------------------------------------------------------ -->
+
+
+<!-- Figure and Figure Caption -->
+<!-- 
+Figure: The Container
+Figcaption: It contains the actual text caption that describes figure. 
+-->
+
+<!-- 
+The figcaption can be placed at the very top (above the image) or at the very bottom (below the image) inside the figure.
+You can only have one figcaption element inside a single figure tag. 
+-->
+
+<figure style="border: 1px solid #ccc; padding: 10px; max-width: 400px;"> <!-- ignore the css for now -->
+
+  <img src="biryani.png" 
+       alt="Homemade Chicken Biryani garnished with lemon slices" 
+       width="400" 
+       height="300" 
+       style="width: 100%; height: auto;" />
+
+  <figcaption style= color:blue>
+    Freshly cooked Homemade Chicken Biryani, ready to serve.
+  </figcaption>
+
+</figure>
+</body>
+</html>
